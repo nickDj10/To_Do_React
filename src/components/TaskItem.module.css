@@ -1,0 +1,111 @@
+.content_list {
+   border: 2px outset #f1f1f1;
+   font-size: 24px;
+   padding: 15px;
+   list-style: none;
+   margin-bottom: 20px;
+   border-radius: 24px;
+
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   column-gap: 20px;
+   box-shadow: 5px 5px 10px 5px#18181033;
+}
+
+.content_list--task {
+   word-break: break-all;
+   text-align: justify;
+}
+
+.content_list--one {
+   display: flex;
+   align-items: center;
+}
+
+.checkBox {
+   display: none;
+}
+
+.checkBox:checked + .list_icon--first {
+   opacity: 1;
+   border-radius: 50%;
+   border: 2px solid #f1f1f1;
+}
+
+.checkBox:checked ~ .content_list--task {
+   text-decoration: line-through;
+}
+
+.content_list--two {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.list_icon--first {
+   min-width: 38px;
+   height: 38px;
+   background: url("../media/check.png");
+   margin-right: 10px;
+   opacity: 0.4;
+}
+
+.list_icon--second {
+   width: 49px;
+   height: 49px;
+   background: url("../media/edit.png");
+}
+
+.list_icon--third {
+   width: 40px;
+   height: 40px;
+   background: url("../media/trash-bin.png");
+}
+
+.list_icon {
+   background-position: center;
+   background-size: 100% 100%;
+   transition: all 0.2s;
+   border: none;
+}
+
+.list_icon:hover {
+   cursor: pointer;
+   transform: scale(1.1);
+   opacity: 0.9;
+}
+
+.list_icon:active {
+   transform: scale(0.95);
+}
+
+.list_icon--first:active {
+   opacity: 1;
+}
+
+.list_icon--second:hover {
+   opacity: 0.7;
+}
+
+@media only screen and (max-width: 620px) {
+   .content {
+      padding-top: 15%;
+   }
+}
+
+@media only screen and (max-width: 425px) {
+   .container {
+      padding: 50px 10px;
+   }
+   .container h1 {
+      font-size: 40px;
+   }
+   .content_list {
+      padding: 5%;
+      column-gap: 5%;
+   }
+   .content_list--two {
+      flex-direction: column;
+   }
+}

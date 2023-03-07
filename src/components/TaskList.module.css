@@ -1,0 +1,10 @@
+.content {
+   padding-top: 150px;
+   width: 100%;
+}
+
+@media only screen and (max-width: 620px) {
+   .content {
+      padding-top: 15%;
+   }
+}
